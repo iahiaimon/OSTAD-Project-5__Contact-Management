@@ -12,7 +12,7 @@ def main ():
 
     while True:
 
-        print("\nContact Management System \n")
+        print("\n***Contact Management System*** \n")
         print("1: Add Contact ")
         print("2: Remove Contact ")
         print("3: View Contact list ")
@@ -20,31 +20,28 @@ def main ():
         print("5: Update any contact ")
         print("0: Exit \n")
 
-        choice = int(input("What do you want to do : "))
+        choice = (input("What do you want to do : ")).title()
 
-
-        if choice >= 0 and choice <= 5 :
-
-            if choice == 1:
-                add_contact.add_contact(all_contacts)
-                
-            elif choice == 2:
-                remove_contact.remove_contact(all_contacts)
-
-            elif choice == 3:
-                view_all.view_all(all_contacts)
-                
-            elif choice == 4 :
-                search_contact.search_contact(all_contacts)
+        if choice in ["1" , "Add Contact"] :
+            add_contact.add_contact(all_contacts)
             
-            elif choice == 5 :
-                update_contact.update_contact(all_contacts)
+        elif choice in ["2" , "Remove Contact"] :
+            remove_contact.remove_contact(all_contacts)
+
+        elif choice in ["3" , "View Contact list"] :
+            view_all.view_all(all_contacts)
             
-            elif choice == 0 :
-                print("\nYou are currently out of the program")
-                print("Thank you for using the program \n")
-                break
+        elif choice in ["4" , "Search any contact"] :
+            search_contact.search_contact(all_contacts)
         
+        elif choice in ["5" , "Update any contact"] :
+            update_contact.update_contact(all_contacts)
+        
+        elif choice in["0" , "Exit"] :
+            print("\nYou are currently out of the program")
+            print("Thank you for using the program \n")
+            break
+    
         else:
             print("\nInvalid input... Please choose an option from the list. ")
 

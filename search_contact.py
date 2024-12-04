@@ -1,5 +1,4 @@
 
-
 def search_contact(all_contacts):
     title = input("\nEnter the number or name you want to see...").title()
 
@@ -7,7 +6,7 @@ def search_contact(all_contacts):
 
     for contact in all_contacts:
         if contact["number"] == title or contact["name"] == title:
-            print("\nNumber Found ")
+            print("\n***Number Found*** ")
             print(f"\nName : {contact['name']} , Number : {contact['number']} , Email : {contact['email']} , Address : {contact['address']}")
             return all_contacts
         

@@ -5,12 +5,10 @@ def remove_contact(all_contacts):
 
     contact_found = False
 
-    contact = ""
-
     for contact in all_contacts:
 
         if contact['number'] == title or contact['name'] == title:
-            print(f"Do you want to delete {contact['name']} from your contact list")
+            print(f"Do you want to delete '{contact['name']}' from your contact list")
             print("\nType yes or no ")
             type = input("\nType here :").lower()
             if type == "yes":
@@ -19,7 +17,7 @@ def remove_contact(all_contacts):
                 print(f"\nThe contact '{title}' has been removed successfully.")
                 contact_found = True
                 
-            else:
+            elif type == "no":
                 print(f"\nThe contact {contact['name']} is not removed from the list")
 
             return all_contacts

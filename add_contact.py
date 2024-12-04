@@ -50,7 +50,6 @@ def add_contact(all_contacts):
 
         all_contacts.append(contact)
 
-        # all_contacts.append({'name': name , 'number': number , 'email': email ,'address': address})
 
         save_all_contact(all_contacts)
 

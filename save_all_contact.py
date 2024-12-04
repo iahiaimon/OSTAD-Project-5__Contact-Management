@@ -16,4 +16,3 @@ def store():
     
     with open('contact.json', mode='r') as load_file:
         return json.load(load_file)
-

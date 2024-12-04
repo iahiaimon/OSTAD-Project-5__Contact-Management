@@ -17,11 +17,6 @@ def update_contact(all_contacts):
                     if not number.isdigit():
                         print("\nInvalid input! Enter a valid contact number")
                         continue
-
-                    # for contact in all_contacts:
-                    #     if contact['number'] == number:
-                    #         print(f"\nThe number {number} already in the list ")
-                    #         return all_contacts
                     break
 
                 while True:
